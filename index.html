@@ -32,32 +32,11 @@
     button:hover {
       background-color: #2980b9;
     }
-    #hiddenContent {
-      display: none; /* 처음에는 숨김 */
-      margin-top: 20px;
-    }
     img {
       max-width: 90%; /* 화면 크기에 맞게 자동 조정 */
       height: auto;
       border-radius: 10px;
       margin-top: 10px;
-    }
-
-    /* 📱 모바일 화면 대응 */
-    @media (max-width: 600px) {
-      body {
-        margin: 10px;
-      }
-      h1 {
-        font-size: 1.5em;
-      }
-      p {
-        font-size: 1em;
-      }
-      button {
-        width: 100%; /* 버튼을 화면 너비에 맞게 */
-        font-size: 1.1em;
-      }
     }
   </style>
 </head>
@@ -66,20 +45,16 @@
   <h1>안녕하세요? 누구세요</h1>
   <p>우와 신기하다 홈페이지를 만들었어요</p>
 
-  <!-- 버튼 -->
-  <button onclick="showContent()">누구세요</button>
+  <!-- 미리보기 이미지 -->
+  <img id="previewImage" src="IMG_7591.jpg" alt="미리보기 사진">
 
-  <!-- 숨겨진 글자와 이미지 -->
-  <div id="hiddenContent">
-    <p>누구시냐고요</p>
-    <!-- 깃헙에 올린 이미지 파일 적용 -->
-    <img src="IMG_7591.jpg" alt="내 사진">
-  </div>
+  <!-- 버튼 -->
+  <button onclick="changeImage()">누구세요</button>
 
   <script>
-    function showContent() {
-      const content = document.getElementById("hiddenContent");
-      content.style.display = (content.style.display === "block") ? "none" : "block";
+    function changeImage() {
+      const img = document.getElementById("previewImage");
+      img.src = "image_623525687.jpg"; // 버튼 클릭 시 다른 이미지로 변경
     }
   </script>
 </body>
