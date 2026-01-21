@@ -33,7 +33,7 @@
       background-color: #2980b9;
     }
     img {
-      max-width: 90%; /* 화면 크기에 맞게 자동 조정 */
+      max-width: 90%;
       height: auto;
       border-radius: 10px;
       margin-top: 10px;
@@ -45,16 +45,17 @@
   <h1>안녕하세요? 누구세요</h1>
   <p>우와 신기하다 홈페이지를 만들었어요</p>
 
-  <!-- 미리보기 이미지 -->
+  <!-- 처음에 보이는 미리보기 이미지 -->
   <img id="previewImage" src="IMG_7591.jpg" alt="미리보기 사진">
 
-  <!-- 버튼 -->
+  <!-- 버튼 (사진 밑으로 이동) -->
   <button onclick="changeImage()">누구세요</button>
 
   <script>
     function changeImage() {
       const img = document.getElementById("previewImage");
-      img.src = "image_623525687.jpg"; // 버튼 클릭 시 다른 이미지로 변경
+      img.src = "image_623525687.jpg"; // 버튼 클릭 시 다른 이미지로 교체
+      img.alt = "버튼 클릭 후 사진";   // alt 텍스트도 바꿔줌
     }
   </script>
 </body>
