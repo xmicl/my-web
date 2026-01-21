@@ -20,9 +20,10 @@
       border-radius: 10px;
       margin-top: 10px;
     }
+    .action-area {
+      margin-top: 20px; /* 사진과 버튼/텍스트 사이 간격 */
+    }
     button {
-      display: block;
-      margin: 20px auto 0;
       padding: 12px 20px;
       font-size: 1em;
       border: none;
@@ -35,7 +36,6 @@
       background-color: #2980b9;
     }
     #message {
-      margin-top: 20px;
       font-size: 1.2em;
       color: #2c3e50;
       display: none; /* 처음엔 숨김 */
@@ -50,11 +50,11 @@
   <!-- 처음에 보이는 이미지 -->
   <img id="previewImage" src="image/IMG_7591.jpg" alt="미리보기 사진">
 
-  <!-- 버튼 -->
-  <button id="changeBtn" onclick="changeImage()">누구세요</button>
-
-  <!-- 버튼 클릭 후 나타날 텍스트 -->
-  <p id="message">누구시냐고요</p>
+  <!-- 버튼과 메시지를 같은 자리(action-area)에 배치 -->
+  <div class="action-area">
+    <button id="changeBtn" onclick="changeImage()">누구세요</button>
+    <p id="message">누구시냐고요</p>
+  </div>
 
   <script>
     function changeImage() {
@@ -63,13 +63,13 @@
       const msg = document.getElementById("message");
 
       // 이미지 교체
-      img.src = "image/image_625325687.jpg";
+      img.src = "image/image_623525687.jpg";
       img.alt = "버튼 클릭 후 사진";
 
       // 버튼 숨기기
       btn.style.display = "none";
 
-      // 텍스트 보이기
+      // 텍스트 보이기 (버튼 있던 자리)
       msg.style.display = "block";
     }
   </script>
