@@ -21,8 +21,8 @@
       margin-top: 10px;
     }
     button {
-      display: block;       /* 블록 요소로 변경 */
-      margin: 20px auto 0;  /* 위쪽 여백 20px, 좌우 자동 → 중앙 정렬 */
+      display: block;
+      margin: 20px auto 0;
       padding: 12px 20px;
       font-size: 1em;
       border: none;
@@ -34,6 +34,12 @@
     button:hover {
       background-color: #2980b9;
     }
+    #message {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #2c3e50;
+      display: none; /* 처음엔 숨김 */
+    }
   </style>
 </head>
 
@@ -41,15 +47,30 @@
   <h1>안녕하세요? 누구세요</h1>
   <p>우와 신기하다 홈페이지를 만들었어요</p>
 
+  <!-- 처음에 보이는 이미지 -->
   <img id="previewImage" src="image/IMG_7591.jpg" alt="미리보기 사진">
 
-  <button onclick="changeImage()">누구세요</button>
+  <!-- 버튼 -->
+  <button id="changeBtn" onclick="changeImage()">누구세요</button>
+
+  <!-- 버튼 클릭 후 나타날 텍스트 -->
+  <p id="message">누구시냐고요</p>
 
   <script>
     function changeImage() {
       const img = document.getElementById("previewImage");
+      const btn = document.getElementById("changeBtn");
+      const msg = document.getElementById("message");
+
+      // 이미지 교체
       img.src = "image/image_625325687.jpg";
       img.alt = "버튼 클릭 후 사진";
+
+      // 버튼 숨기기
+      btn.style.display = "none";
+
+      // 텍스트 보이기
+      msg.style.display = "block";
     }
   </script>
 </body>
