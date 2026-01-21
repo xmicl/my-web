@@ -8,9 +8,9 @@
   <!-- 카톡/페북/트위터 등 미리보기용 OG 태그 -->
   <meta property="og:title" content="홈페이지 만드는 중..">
   <meta property="og:description" content="우와 신기하다 홈페이지를 만들었어요">
-  <meta property="og:image" content="https://raw.githubusercontent.com/사용자명/저장소명/main/image/IMG_7591.jpg">
+  <meta property="og:image" content="https://raw.githubusercontent.com/xmicl/my-web/main/image/IMG_7591.jpg?v=2">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://사용자명.github.io/저장소명/">
+  <meta property="og:url" content="https://xmicl.github.io/my-web/?v=2">
 
   <style>
     body {
@@ -19,18 +19,14 @@
       margin: 20px;
       background-color: #f0f8ff;
     }
-    h1 {
-      color: #2c3e50;
-    }
+    h1 { color: #2c3e50; }
     img {
       max-width: 90%;
       height: auto;
       border-radius: 10px;
       margin-top: 10px;
     }
-    .action-area {
-      margin-top: 20px; /* 사진과 버튼/텍스트 사이 간격 */
-    }
+    .action-area { margin-top: 20px; }
     button {
       padding: 12px 20px;
       font-size: 1em;
@@ -40,13 +36,11 @@
       color: white;
       cursor: pointer;
     }
-    button:hover {
-      background-color: #2980b9;
-    }
+    button:hover { background-color: #2980b9; }
     #message {
       font-size: 1.2em;
       color: #2c3e50;
-      display: none; /* 처음엔 숨김 */
+      display: none;
     }
   </style>
 </head>
@@ -55,10 +49,8 @@
   <h1>안녕하세요? 누구세요</h1>
   <p>우와 신기하다 홈페이지를 만들었어요</p>
 
-  <!-- 처음에 보이는 이미지 -->
   <img id="previewImage" src="image/IMG_7591.jpg" alt="미리보기 사진">
 
-  <!-- 버튼과 메시지를 같은 자리(action-area)에 배치 -->
   <div class="action-area">
     <button id="changeBtn" onclick="changeImage()">누구세요</button>
     <p id="message">누구시냐고요</p>
@@ -83,4 +75,3 @@
   </script>
 </body>
 </html>
-
