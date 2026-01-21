@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>홈페이지 만드는 중..</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 모바일 대응 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,11 +13,6 @@
     }
     h1 {
       color: #2c3e50;
-      font-size: 2em;
-    }
-    p {
-      font-size: 1.1em;
-      line-height: 1.5;
     }
     button {
       padding: 12px 20px;
@@ -46,18 +41,17 @@
   <p>우와 신기하다 홈페이지를 만들었어요</p>
 
   <!-- 처음에 보이는 미리보기 이미지 -->
-  <img id="previewImage" src="IMG_7591.jpg" alt="미리보기 사진">
+  <img id="previewImage" src="image/IMG_7591.jpg" alt="미리보기 사진">
 
-  <!-- 버튼 (사진 밑으로 이동) -->
-  <button onclick="image_625325687()">누구세요</button>
+  <!-- 버튼 (사진 밑으로 위치) -->
+  <button onclick="changeImage()">누구세요</button>
 
   <script>
     function changeImage() {
       const img = document.getElementById("previewImage");
-      img.src = "image_623525687.jpg"; // 버튼 클릭 시 다른 이미지로 교체
-      img.alt = "버튼 클릭 후 사진";   // alt 텍스트도 바꿔줌
+      img.src = "image/image_623525687.jpg"; // 버튼 클릭 시 다른 이미지로 교체
+      img.alt = "버튼 클릭 후 사진";
     }
   </script>
 </body>
 </html>
-
