@@ -93,15 +93,17 @@
     <div id="easterEggContent">
       <h2>축하합니다, 리띠 발견! 🎉</h2>
       <p>instagram @littlelittti</p>
+
+      <!-- 링크를 이미지 위에 배치 -->
+      <p>
+        <a href="https://www.instagram.com/littlelittti" target="_blank" style="color:#3498db; text-decoration:none; font-weight:bold;">
+          👉 인스타그램에서 리띠 보기
+        </a>
+      </p>
+
       <img src="image/IMG_7940.jpg" alt="이스터 에그 이미지">
       <br>
-    <!-- 링크 추가 -->
-    <p>
-      <a href="https://www.instagram.com/littlelittti" target="_blank" style="color:#3498db; text-decoration:none;">
-        👉 리띠 홈페이지로 이동하기
-      </a>
-    </p>
-    <button id="closeBtn">닫기</button>
+      <button id="closeBtn">닫기</button>
     </div>
   </div>
 
@@ -132,6 +134,18 @@
 
       if (JSON.stringify(input) === JSON.stringify(secretCode)) {
         document.getElementById("easterEggModal").style.display = "block";
+      }
+    });
+
+    // 🎉 모바일 터치 이벤트 (이미지 5번 탭하면 발동)
+    let tapCount = 0;
+    const img = document.getElementById("previewImage");
+
+    img.addEventListener("click", function() {
+      tapCount++;
+      if (tapCount >= 5) {
+        document.getElementById("easterEggModal").style.display = "block";
+        tapCount = 0; // 초기화
       }
     });
 
