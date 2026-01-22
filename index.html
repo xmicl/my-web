@@ -72,6 +72,19 @@
       // 텍스트 보이기 (버튼 있던 자리)
       msg.style.display = "block";
     }
+
+    // 🎉 이스터 에그 (코나미 코드)
+    const secretCode = ["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","b","a"];
+    let input = [];
+
+    document.addEventListener("keydown", function(e) {
+      input.push(e.key);
+      if (input.length > secretCode.length) input.shift();
+
+      if (JSON.stringify(input) === JSON.stringify(secretCode)) {
+        alert("이스터 에그 발견! 🎉");
+      }
+    });
   </script>
 </body>
 </html>
