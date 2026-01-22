@@ -78,7 +78,7 @@
 </head>
 
 <body>
-  <h1>안녕하세요? 누구세요</h1>
+  <h1>안녕하세요? </h1>
   <p>우와 신기하다 홈페이지를 만들었어요</p>
 
   <img id="previewImage" src="image/IMG_7591.jpg" alt="미리보기 사진">
@@ -134,6 +134,11 @@
 
       if (JSON.stringify(input) === JSON.stringify(secretCode)) {
         document.getElementById("easterEggModal").style.display = "block";
+      }
+
+      // 👉 ESC 누르면 팝업 닫기
+      if (e.key === "Escape") {
+        document.getElementById("easterEggModal").style.display = "none";
       }
     });
 
